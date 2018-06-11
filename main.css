@@ -1,0 +1,158 @@
+/* Define color variables */
+:root{
+	--lightB: 	#4d7abc;
+	--midB: 	#4071b6;
+	--darkB: 	#004b8e;
+	--green: 	#5affa8;
+	--smallFontColor:	rgba(255,255,255,0.5); 
+}
+
+body{
+	font-family: calibri, sans-serif;
+	color: white;
+	margin:0;
+	padding:0;
+}
+p, h3{
+	margin: 0;
+}
+
+#topDiv{
+	background-image:url("../assets/recycle-back.png");
+	background-size: auto 120%;
+	background-position: 50px 0px;;
+	background-repeat: no-repeat;
+	background-color:var(--midB);
+	font-size:20pt;
+}
+
+/*Logo button and Go button*/
+button{
+	background-color: white;
+	color: var(--midB);
+	height: 30px;
+	border: none;
+	min-width: 60px;
+}
+	#goButton{
+		min-width: 150px;
+		border-radius: 5px;
+	}
+	
+#menuLinks{
+	float: right;
+	padding-right:20px;
+}
+a{
+	color: var(--smallFontColor);
+	text-decoration: none;
+	font-size: 10pt;
+	padding:10px;
+}
+
+/*information symbol positioned at the top right corner of paragraph*/
+#infoSymbol{
+	position: relative;
+	left:75%;
+	top:20px;
+	margin:0;
+}
+
+/*text and form */
+#centerContent{
+	margin: auto;
+	padding-bottom:50px;
+	width: 50%;
+	text-align:center;
+}
+	#centerContent > p{
+		margin-top:0;
+		width: 90%;
+		margin: auto;
+	}
+
+/*Text input and dropdown*/
+.pledgeForm{
+	border: none;
+	border-radius: 5px;
+	height: 30px;
+	min-width: 170px;
+	background-color: var(--darkB);
+	color: var(--lightB);
+	padding: 0;
+	padding-left: 10px;
+}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color: var(--lightB);
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	   color: var(--lightB);
+	}
+	::placeholder{
+		color: var(--lightB);
+	}
+
+	select.pledgeForm{
+		background:url("../assets/downarrow.png") no-repeat right;
+		background-position:95%;
+		background-color:var(--darkB);
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+	}
+
+.checkbox{
+	-webkit-appearance: none;
+	border: 1px solid white;
+	background-color: var(--midB);
+	width: 15px;
+	height: 15px;
+}
+	
+.smallerText{
+	font-size: 10pt;
+	display: inline;
+}
+
+	
+
+/*Bottom div is divided into three columns*/
+#bottomDiv{
+	background-color: var(--lightB);
+	font-size:20pt;
+}
+
+#greenTotal{
+	font-size:100pt;
+	color: var(--green);
+	margin:0;
+	padding:0;
+}
+#divider{
+	/*TODO: vertical bar, center recycle-circle*/
+}
+
+.column{  /*make a column layout */
+	float:left;
+	width:33.33%;
+	text-align:center;
+}
+.row:after{  /*clear column layout*/
+	content:"";
+	display:table;
+	clear:both;
+}
+
+footer{
+	color: var(--midB);
+	padding-top: 20px;
+	text-align:center;
+}
+
+/*Responsive layout*/
+@media screen and (max-width: 700px){
+	.column{
+		width:100%;
+	}
+}
+	
